@@ -13,6 +13,7 @@ const MovieItem = ({ movie }) => {
   return (
     <ItemWrapper>
       {movie.name}
+
       <DeleteButton movieId={movie.id} />
       <WatchedButton />
 
