@@ -3,7 +3,6 @@ import React from "react";
 //buttons
 import DeleteButton from "./Buttons/DeleteButton";
 import WatchedButton from "./Buttons/WatchedButton";
-
 //style
 import { ItemWrapper } from "../styles";
 
@@ -15,7 +14,7 @@ const MovieItem = ({ movie }) => {
       {movie.name}
 
       <DeleteButton movieId={movie.id} />
-      <WatchedButton />
+      <WatchedButton movieId={movie.id} movie={movie.watch} />
 
       <hr />
     </ItemWrapper>

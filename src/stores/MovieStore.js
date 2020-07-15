@@ -6,7 +6,13 @@ class MovieStore {
 
   createMovie = (newMovie) => {
     newMovie.id = this.movies[movies.length - 1].id + 1;
+    newMovie.watch = false;
     this.movies.push(newMovie);
+  };
+
+  watchedButton = (movieId) => {
+    const foundMovie = this.movies.find((movie) => movie.id === +movieId);
+    foundMovie.watch = !foundMovie.watch;
   };
 
   deleteMovie = (movieId) => {

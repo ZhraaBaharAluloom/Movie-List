@@ -10,15 +10,18 @@ import WatchedItem from "./WatchedItem";
 const WatchedList = () => {
   const [query, setQuery] = useState("");
 
-  const movieList = movieStore.movies
+  const watchedList = movieStore.movies
+    .filter((movie) => movie.watch)
     .filter((movie) => movie.name.toLowerCase().includes(query.toLowerCase()))
     .map((movie) => <WatchedItem movie={movie} key={movie.id} />);
+  const moviesSize = watchedList.length;
+
   return (
     <div>
       <br />
+      Numbers of Watched Movies : {moviesSize}
       <SearchBar setQuery={setQuery} />
-
-      <WatchedListWrapper>{movieList}</WatchedListWrapper>
+      <WatchedListWrapper>{watchedList}</WatchedListWrapper>
     </div>
   );
 };
