@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import movieStore from "../../stores/MovieStore";
 
+//style
+import { AddButtonStyled } from "../../styles";
+
 const AddButton = ({ isOpen }) => {
   const [movie, setMovie] = useState({ name: "" });
   const handleChange = (event) => {
@@ -13,7 +16,7 @@ const AddButton = ({ isOpen }) => {
   };
 
   return (
-    <div>
+    <AddButtonStyled>
       <form isOpen={isOpen} onSubmit={handleSubmit}>
         <div class="form-row">
           <div class="col-4">
@@ -30,7 +33,7 @@ const AddButton = ({ isOpen }) => {
           </button>
         </div>
       </form>
-    </div>
+    </AddButtonStyled>
   );
 };
 

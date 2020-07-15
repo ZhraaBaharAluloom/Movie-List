@@ -12,10 +12,12 @@ function App() {
       <AddButton />
       <br />
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-lg-6">
+          <h3>Watchlist</h3>
           <MovieList />
         </div>
-        <div className="col-12">
+        <div className="col-12 col-lg-6">
+          <h3>Watchedlist</h3>
           <WatchedList />
         </div>
       </div>

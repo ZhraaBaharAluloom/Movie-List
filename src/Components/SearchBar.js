@@ -1,8 +1,11 @@
 import React from "react";
 
+//style
+import { SearchBarStyled } from "../styles";
+
 const SearchBar = ({ setQuery }) => {
   return (
-    <input
+    <SearchBarStyled
       placeholder="Search..."
       onChange={(event) => setQuery(event.target.value)}
     />

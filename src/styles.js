@@ -17,24 +17,43 @@ export const WatchedButtonStyled = styled.p`
 `;
 
 export const ListWrapper = styled.div`
-  width: 400px;
-  margin: 20px;
+  padding: 10px;
 `;
 
 export const WatchedListWrapper = styled.div`
-  width: 400px;
-  margin: 20px;
+  padding: 10px;
 `;
 
 export const ItemWrapper = styled.div`
   padding: 4px;
   border: 1px solid;
-  border-radius: 3px;
+  border-radius: 5px;
 `;
 
 export const GlobalStyle = createGlobalStyle`
 body{
   display: block;
-  background-color:#f7ede2;
+  background-color:#fffffc;
 }
+h3 {
+  margin:auto;
+  text-align:center;
+
+}
+`;
+
+export const SearchBarStyled = styled.input`
+  padding: 0.5rem;
+  display: block;
+  width: 90%;
+  border-radius: 6px;
+  margin: auto;
+`;
+
+export const AddButtonStyled = styled.div`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 90%;
+  border-radius: 6px;
 `;

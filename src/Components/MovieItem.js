@@ -15,7 +15,6 @@ const MovieItem = ({ movie }) => {
       {movie.name}
       <DeleteButton movieId={movie.id} />
       <WatchedButton />
-
       <hr />
     </ItemWrapper>
   );

@@ -16,7 +16,8 @@ const MovieList = () => {
 
   return (
     <div>
-      <h3>Watchlist</h3>
+      <br />
+
       <SearchBar setQuery={setQuery} />
       <ListWrapper>{movieList}</ListWrapper>
     </div>
