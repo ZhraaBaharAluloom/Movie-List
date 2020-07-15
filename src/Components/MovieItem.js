@@ -12,7 +12,7 @@ import { observer } from "mobx-react";
 const MovieItem = ({ movie }) => {
   return (
     <ItemWrapper>
-      {movie.name}
+      {movie.name} <img src={movie.image} />
       <DeleteButton movieId={movie.id} />
       <WatchedButton movieId={movie.id} movie={movie.watch} />
       <hr />

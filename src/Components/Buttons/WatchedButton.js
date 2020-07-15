@@ -1,9 +1,10 @@
 import React from "react";
+
+//stores
 import movieStore from "../../stores/MovieStore";
 
 //data
 import { WatchedButtonStyled } from "../../styles";
-import movies from "../../movies";
 
 const WatchedButton = ({ movieId, movie }) => {
   const handleWatched = () => {

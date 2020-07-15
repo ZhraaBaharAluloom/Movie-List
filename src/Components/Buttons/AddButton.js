@@ -5,7 +5,7 @@ import movieStore from "../../stores/MovieStore";
 import { AddButtonStyled } from "../../styles";
 
 const AddButton = ({ isOpen }) => {
-  const [movie, setMovie] = useState({ name: "" });
+  const [movie, setMovie] = useState({ name: "", image: "" });
   const handleChange = (event) => {
     setMovie({ ...movie, [event.target.name]: event.target.value });
   };
@@ -21,11 +21,20 @@ const AddButton = ({ isOpen }) => {
         <div class="form-row">
           <div class="col-4">
             <input
+              required
               name="name"
               onChange={handleChange}
               type="text"
               class="form-control"
               placeholder="New Movie.."
+            />
+          </div>
+          <div className="col-4 ">
+            <input
+              onChange={handleChange}
+              name="image"
+              className="form-control"
+              placeholder="insert image.."
             />
           </div>
           <button type="submit" className="btn btn-primary">
